@@ -125,7 +125,9 @@ Please make sure that a Valid Folder is specified in the settings for the plugin
  * @param imgPath - Relative vault path of related image
  */
 const initializeInfo = (imgPath: string, imgName: string): string => {
-    return `<span class='gallery-span-info'> [[${imgName}]] </span>\n
+    return `![](${imgPath})
+[[Source]](${imgName.replace(/\.[^/.]+$/, "")}_source)
+<span class='gallery-span-info'> [[${imgName}]] </span>\n
 %% Place Tags Here %%
 \`\`\`gallery-info
 imgPath=${imgPath}
